@@ -49,5 +49,3 @@ steps:
     command: 'build'
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
-##vso[task.setvariable variable=MY_VAR]my_value
-+ echo '##vso[task.setvariable variable=MY_VAR]my_value'
