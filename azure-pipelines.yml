@@ -49,6 +49,5 @@ steps:
     command: 'build'
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
-- task:
-BatchScript@1
-inputs:filename:'#L160'
+##vso[task.setvariable variable=MY_VAR]my_value
++ echo '##vso[task.setvariable variable=MY_VAR]my_value'
