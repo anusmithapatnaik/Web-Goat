@@ -55,7 +55,7 @@ steps:
     set -x
     echo ##vso[task.setvariable variable=MY_VAR]my_value
     - task: HCLAppScanOnCloud@2
-  inputs:
+    - inputs:
     AppSecTestService: 'app scan web'
     applications: '530c7157-294b-4a1e-98cc-fd874058e21a'
     scantype: 'static'
