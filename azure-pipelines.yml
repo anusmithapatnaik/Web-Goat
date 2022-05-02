@@ -1,4 +1,12 @@
 # ASP.NET Core
+- task: HCLAppScanOnCloud@2
+  inputs:
+    AppSecTestService: 'app scan web'
+    applications: '530c7157-294b-4a1e-98cc-fd874058e21a'
+    scantype: 'static'
+    ScanSpeedOptions: 'thorough'
+    intervention: false
+    suspend: false
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
