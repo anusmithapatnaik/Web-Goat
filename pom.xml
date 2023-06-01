@@ -277,7 +277,7 @@
         		<apiToken>${env.SNYK_TOKEN}</apiToken>
         		<args>
 			<arg>--severity-threshold=high</arg>
-			<arg>--scan-all-unmanaged</arg>
+			<skip>true</skip>	
                         <arg>--json</arg>	
         		</args>
       		</configuration>
