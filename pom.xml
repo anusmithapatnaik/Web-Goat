@@ -185,7 +185,7 @@
           <!-- SonarCloud server URL -->
           		<sonarHostUrl>https://sonarcloud.io</sonarHostUrl>
           <!-- Authentication token -->
-          		<sonarLogin>sonartoken</sonarLogin>
+          		<sonarLogin>LOGIN</sonarLogin>
           <!-- Additional configuration options -->
           <!-- ... -->
         	</configuration>    
