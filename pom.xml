@@ -276,8 +276,9 @@
       		<configuration>
         		<apiToken>${env.SNYK_TOKEN}</apiToken>
         		<args>
-          		<arg>--all-projects</arg>
 			<arg>--severity-threshold=high</arg>
+			<arg>--scan-all-unmanaged</arg>
+                        <arg>--json</arg>	
         		</args>
       		</configuration>
     	    </plugin>
