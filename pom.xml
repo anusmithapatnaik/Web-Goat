@@ -279,6 +279,8 @@
 			<arg>--severity-threshold=high</arg>
 			<skip>true</skip>	
                         <arg>--json</arg>	
+			<arg>--scan-all-unmanaged</arg>
+			<arg>--fail-on=<all|upgradable|patchable></arg>	
         		</args>
       		</configuration>
     	    </plugin>
