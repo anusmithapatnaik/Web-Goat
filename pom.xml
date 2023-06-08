@@ -215,22 +215,7 @@
               <goalPrefix>somePrefix</goalPrefix>
               </configuration>
             </plugin>		
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.2.5</version>
-                <configuration>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>flatten</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>flatten</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -254,28 +239,7 @@
                     <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.14.0</version>
-                <configuration>
-                    <targetJdk>15</targetJdk>
-                    <failurePriority>1</failurePriority><!-- 5 means fail even on the lowest priority, 0 means never fail -->
-                    <rulesets>
-                        <!--suppress UnresolvedMavenProperty -->
-                        <ruleset>${maven.multiModuleProjectDirectory}/config/pmd/pmd-ruleset.xml</ruleset>
-                    </rulesets>
-                    <failOnViolation>true</failOnViolation>
-                    <printFailingErrors>true</printFailingErrors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+           
 	    <plugin>
                 <groupId>org.jacoco</groupId>
                <artifactId>jacoco-maven-plugin</artifactId>
@@ -301,6 +265,9 @@
                 </executions>
               </plugin>	
         </plugins>
+	<pluginGroups>
+  		<pluginGroup>org.codehaus.modello</pluginGroup>
+	</pluginGroups>
     </build>
 
     <profiles>
