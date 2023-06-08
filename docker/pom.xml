@@ -28,6 +28,11 @@
     	</dependency>	
        
     </dependencies>
+	
+    <properties>
+  	<sonar.organization>awskey</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>	
 
     <build>
         <plugins>
