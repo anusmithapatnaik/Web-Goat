@@ -116,6 +116,10 @@
     </ciManagement>
 
     <properties>
+	  
+  	<sonar.organization>awskey</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
         <!-- Use UTF-8 Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -189,21 +193,7 @@
     </dependencies>
 
     <build>
-        <plugins>
-           <!-- SonarCloud Maven Plugin -->
-            <plugin>
-        	<groupId>org.sonarsource.scanner.maven</groupId>
-        	<artifactId>sonar-maven-plugin</artifactId>
-        	<version>3.9.0.2155</version>
-		<configuration>
-          <!-- SonarCloud server URL -->
-          		<sonarHostUrl>https://sonarcloud.io</sonarHostUrl>
-          <!-- Authentication token -->
-          		<sonarLogin>sonartoken</sonarLogin>
-          <!-- Additional configuration options -->
-          <!-- ... -->
-        	</configuration>    
-            </plugin>		
+        <plugins>	
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
