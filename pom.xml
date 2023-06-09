@@ -10,7 +10,7 @@
 
     
     <prerequisites>
-        <maven>3.2.5</maven>
+        <maven>3.8.1</maven>
     </prerequisites>
 
     <organization>
@@ -123,13 +123,13 @@
         <build.number>build</build.number>
 
         <!-- Shared properties with plugins and version numbers across submodules-->
-        <activation.version>1.1.1</activation.version>
+        <activation.version>1.2.1</activation.version>
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-io.version>2.6</commons-io.version>
         <guava.version>30.1-jre</guava.version>
         <lombok.version>1.18.20</lombok.version>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-failsafe-plugin.version>2.22.0</maven-failsafe-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
@@ -232,7 +232,35 @@
                     <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
                 </configuration>
             </plugin>
-           
+           <plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>jaxws-maven-plugin</artifactId>
+			<version>2.4.1</version>
+			<dependencies>
+				<dependency>
+					<groupId>com.sun.xml.ws</groupId>
+					<artifactId>jaxws-tools</artifactId>
+					<version>2.3.0.2</version>
+				</dependency>
+			</dependencies>
+			<executions>
+				<execution>
+					<goals>
+						<goal>wsimport</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<packageName>com.bmc.ao.xsd._2008._09.soa</packageName>
+				<verbose>true</verbose>
+				<xdebug>true</xdebug>
+				<wsdlDirectory>${project.basedir}/src/wsdl</wsdlDirectory>
+				<vmArgs>
+					<vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
+					<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+				</vmArgs>
+			</configuration>
+		</plugin>
 	    <plugin>
                 <groupId>org.jacoco</groupId>
                <artifactId>jacoco-maven-plugin</artifactId>
