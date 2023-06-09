@@ -4,7 +4,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.owasp.webgoat</groupId>
-    <artifactId>webgoat-parent</artifactId>
+    <artifactId>web-goat</artifactId>
     <packaging>pom</packaging>
     <version>8.2.1-SNAPSHOT</version>
 
@@ -183,7 +183,7 @@
 	<dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>3.2.1</version>
+            <version>3.5.0</version>
         </dependency>    
 	<dependency>
             <groupId>org.nd4j</groupId>
