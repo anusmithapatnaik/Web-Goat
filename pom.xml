@@ -8,11 +8,7 @@
     <packaging>pom</packaging>
     <version>8.2.1-SNAPSHOT</version>
 
-    <name>WebGoat Parent Pom</name>
-    <description>Parent Pom for the WebGoat Project. A deliberately insecure Web Application</description>
-    <inceptionYear>2006</inceptionYear>
-    <url>https://github.com/WebGoat/WebGoat</url>
-
+    
     <prerequisites>
         <maven>3.2.5</maven>
     </prerequisites>
@@ -116,9 +112,6 @@
     </ciManagement>
 
     <properties>
-	  
-  	<sonar.organization>awskey</sonar.organization>
-  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
         <!-- Use UTF-8 Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -264,10 +257,16 @@
                   </execution>
                 </executions>
               </plugin>	
+	      <plugin>
+      		<groupId>io.snyk</groupId>
+      		<artifactId>snyk-maven-plugin</artifactId>
+      		<version>2.0.0</version>
+      		<inherited>false</inherited>
+      		<configuration>
+        	<org>asecurityguru</org>
+      		</configuration>
+    	     </plugin>
         </plugins>
-	<pluginGroups>
-  		<pluginGroup>org.codehaus.modello</pluginGroup>
-	</pluginGroups>
     </build>
 
     <profiles>
