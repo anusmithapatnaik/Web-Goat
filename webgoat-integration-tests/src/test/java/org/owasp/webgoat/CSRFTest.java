@@ -244,7 +244,7 @@ public class CSRFTest extends IntegrationTest {
     }
 
     /**
-     * Try to register the new user. Ignore the result.
+     * Try to register the new users. Ignore the result.
      */
     private void registerCSRFUser() {
 
